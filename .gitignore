@@ -1,0 +1,64 @@
+### macOS System Files ###
+.DS_Store
+.Trashes
+
+### Temporary Files ###
+*~
+*.swp
+*.swo
+*.swn
+
+### Directories ###
+**/.idea/
+**/.vscode/
+**/.terraform/
+**/.cache/
+**/.npm/
+**/.yarn/
+**/.bundle/
+
+### Logs and Databases ###
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+### Environment Files ###
+.env
+*.env
+.secrets
+
+### SSH/Keys ###
+*.pem
+*.key
+*.pub
+id_rsa
+id_dsa
+known_hosts
+authorized_keys
+
+### Backup Files ###
+*.bak
+*.backup
+*.old
+
+### Docker ###
+**/.docker/
+*.tar.gz
+
+### Kubernetes ###
+kubeconfig
+*.kubeconfig
+
+### Terraform ###
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+### Other ###
+*.pid
+*.seed
+*.pid.lock
+*.luarc.json
