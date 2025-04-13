@@ -1,4 +1,3 @@
-let mapleader   = "\<Space>"
 let g:mapleader = "\<Space>"
 
 " Defaults
@@ -17,7 +16,7 @@ Plug 'mbbill/undotree'           " Why only have linear undo tree?
 Plug 'junegunn/fzf'              " Fuzzy finding, ripgrep.
 Plug 'junegunn/fzf.vim'          " -=-=-
 Plug 'itchyny/lightline.vim'     " A lightweight tab line.
-Plug 'luxed/ayu-vim'             " 'ayu' colorscheme.
+Plug 'whatyouhide/vim-gotham'    " 'gotham' colorscheme.
 Plug 'lifepillar/vim-solarized8' " 'solarized8' colorscheme.
 Plug 'airblade/vim-gitgutter'    " Git diff markers.
 call plug#end()
@@ -96,7 +95,7 @@ set listchars=tab:›\ ,trail:•,extends:>,precedes:<,nbsp:_
 " Colorsceme setting
 set termguicolors
 set background=dark
-silent! colorscheme solarized8
+silent! colorscheme gotham
 
 " LightLine settings
 function! GitStatus()
@@ -107,7 +106,7 @@ function! GitStatus()
     return printf('+%d ~%d -%d', l:added, l:modified, l:removed)
 endfunction
 let g:lightline = {
-\ 'colorscheme': 'solarized',
+\ 'colorscheme': 'gotham',
 \ 'active': {
 \  'left': [[ 'mode' ], [ 'fugitive' ], [ 'filename' ], [ 'git' ]],
 \  'right': [[ 'lineinfo' ]]

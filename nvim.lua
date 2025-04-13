@@ -10,8 +10,8 @@ Plug('mbbill/undotree')           -- Why only have linear undo tree?
 Plug('junegunn/fzf')              -- Fuzzy finding, ripgrep
 Plug('junegunn/fzf.vim')          -- Fuzzy finding, ripgrep
 Plug('itchyny/lightline.vim')     -- A lightweight tab line
-Plug('luxed/ayu-vim')             -- 'ayu' colorscheme
 Plug('lifepillar/vim-solarized8') -- 'solarized8' colorscheme
+Plug('whatyouhide/vim-gotham')    -- 'gotham' colorscheme
 Plug('lewis6991/gitsigns.nvim')   -- Git signs
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- Treesitter
 vim.call('plug#end')
@@ -87,8 +87,7 @@ vim.opt.listchars = {
     nbsp     = '_'
 }
 vim.opt.background = 'dark'
-vim.cmd.colorscheme('solarized8')
-vim.g.solarized_italics = 0
+vim.cmd.colorscheme('gotham')
 
 -- FZF
 -- Search is shown at the bottom
@@ -128,7 +127,7 @@ require('nvim-treesitter.configs').setup {
 
 -- Lightline
 vim.g.lightline = {
-    colorscheme = 'solarized',
+    colorscheme = 'gotham',
     active = {
         left = { { 'mode' }, { 'fugitive' }, { 'filename' } },
         right = { { 'lineinfo' } }
@@ -177,7 +176,9 @@ vim.lsp.config['rust-analyzer'] = {
             },
             inlayHints = {
                 maxLength = 10,
-                showParameterHints = false,
+                parameterHints = {
+                    enable = false
+                }
             },
             -- cargo = {
                 -- target = 'wasm32-unknown-unknown',
